@@ -1,0 +1,803 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="assets/materialize/css/materialize.min.css" media="screen,projection" />
+    <!-- Bootstrap Styles-->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FontAwesome Styles-->
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+    <!-- Morris Chart Styles-->
+    <link href="assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
+    <!-- Custom Styles-->
+    <link href="assets/css/custom-styles.css" rel="stylesheet" />
+    <!-- Google Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="assets/js/Lightweight-Chart/cssCharts.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default top-navbar" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand waves-effect waves-dark" href="index.html"><i
+                        class="large material-icons">insert_chart</i> <strong>CAVALLO</strong></a>
+
+                <div id="sideNav" href=""><i class="material-icons dp48">toc</i></div>
+            </div>
+
+            <ul class="nav navbar-top-links navbar-right">
+                <li><a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown1"><i
+                            class="fa fa-user fa-fw"></i> <b>Jin Meng</b> <i
+                            class="material-icons right">arrow_drop_down</i></a></li>
+            </ul>
+        </nav>
+        <!-- Dropdown Structure -->
+        <ul id="dropdown1" class="dropdown-content">
+            <li><a href="#"><i class="fa fa-user fa-fw"></i> My Profile</a>
+            </li>
+            <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+            </li>
+            <li><a href="#"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+            </li>
+        </ul>
+        <ul id="dropdown4" class="dropdown-content dropdown-tasks w250">
+            <li>
+                <a href="#">
+                    <div>
+                        <strong>Jin Meng</strong>
+                        <span class="pull-right text-muted">
+                            <em>Today</em>
+                        </span>
+                    </div>
+                    <div>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...</div>
+                </a>
+            </li>
+            <li class="divider"></li>
+            <li>
+                <a href="#">
+                    <div>
+                        <strong>John Smith</strong>
+                        <span class="pull-right text-muted">
+                            <em>Yesterday</em>
+                        </span>
+                    </div>
+                    <div>Lorem Ipsum has been the industry's standard dummy text ever since an kwilnw...</div>
+                </a>
+            </li>
+            <li class="divider"></li>
+            <li>
+                <a href="#">
+                    <div>
+                        <strong>John Smith</strong>
+                        <span class="pull-right text-muted">
+                            <em>Yesterday</em>
+                        </span>
+                    </div>
+                    <div>Lorem Ipsum has been the industry's standard dummy text ever since the...</div>
+                </a>
+            </li>
+            <li class="divider"></li>
+            <li>
+                <a class="text-center" href="#">
+                    <strong>Read All Messages</strong>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+
+        <!--/. NAV TOP  -->
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+
+                    <li>
+                        <a href="index.html" class="waves-effect waves-dark"><i class="fa fa-dashboard"></i>
+                            Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="chart.html" class="waves-effect waves-dark"><i class="fa fa-bar-chart-o"></i>
+                            Charts</a>
+                    </li>
+
+                    <li>
+                        <a href="table.html" class="active-menu waves-effect waves-dark"><i class="fa fa-table"></i>
+                            Responsive Tables</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </nav>
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper">
+            <div class="header">
+                <h1 class="page-header">
+                    Detailed information sheet 
+                </h1>
+                <ol class="breadcrumb">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Tables</a></li>
+                    <li class="active">Data</li>
+                </ol>
+
+            </div>
+
+            <div id="page-inner">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- Advanced Tables -->
+                        <div class="card">
+                            <div class="card-action">
+                                Order Data
+                            </div>
+                            <div class="card-content">
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-bordered table-hover"
+                                        id="dataTables-example">
+                                        <thead>
+                                            <tr>
+                                                <th>Order ID</th>
+                                                <th>Flavors</th>
+                                                <th>Item number</th>
+                                                <th>Order Address</th>
+                                                <th>Comment Rating</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="odd gradeX">
+                                                <td>487</td>
+                                                <td>Cherry</td>
+                                                <td>5</td>
+                                                <td class="center">4</td>
+                                                <td class="center">B</td>
+                                            </tr>
+                                            <tr class="even gradeC">
+                                                <td>488</td>
+                                                <td>Chocolate</td>
+                                                <td>3</td>
+                                                <td class="center">5</td>
+                                                <td class="center">C</td>
+                                            </tr>
+                                            <tr class="odd gradeA">
+                                                <td>489</td>
+                                                <td>Chocolate</td>
+                                                <td>4</td>
+                                                <td class="center">5.5</td>
+                                                <td class="center">A</td>
+                                            </tr>
+                                            <tr class="even gradeA">
+                                                <td>421</td>
+                                                <td>Honeycomb</td>
+                                                <td>2</td>
+                                                <td class="center">6</td>
+                                                <td class="center">A</td>
+                                            </tr>
+                                            <tr class="odd gradeA">
+                                                <td>423</td>
+                                                <td>Rum and Raisin</td>
+                                                <td>2</td>
+                                                <td class="center">7</td>
+                                                <td class="center">A</td>
+                                            </tr>
+                                            <tr class="even gradeA">
+                                                <td>424</td>
+                                                <td>Chocolate</td>
+                                                <td>1</td>
+                                                <td class="center">6</td>
+                                                <td class="center">A</td>
+                                            </tr>
+                                            <tr class="gradeA">
+                                                <td>133</td>
+                                                <td> Mint </td>
+                                                <td>1</td>
+                                                <td class="center">1.7</td>
+                                                <td class="center">A</td>
+                                            </tr>
+                                            <tr class="gradeA">
+                                                <td>134</td>
+                                                <td> Mint </td>
+                                                <td>1</td>
+                                                <td class="center">1.8</td>
+                                                <td class="center">A</td>
+                                            </tr>
+                                            <tr class="gradeA">
+                                                <td>135</td>
+                                                <td> Mint </td>
+                                                <td>1</td>
+                                                <td class="center">1.8</td>
+                                                <td class="center">A</td>
+                                            </tr>
+                                            <tr class="gradeA">
+                                                <td>136</td>
+                                                <td> Mint</td>
+                                                <td>3</td>
+                                                <td class="center">1.9</td>
+                                                <td class="center">A</td>
+                                            </tr>
+                                            <tr class="gradeA">
+                                                <td>137</td>
+                                                <td> Rum and Raisin</td>
+                                                <td>4</td>
+                                                <td class="center">1.8</td>
+                                                <td class="center">A</td>
+                                            </tr>
+                                            <tr class="gradeA">
+                                                <td>138</td>
+                                                <td> Rum and Raisin</td>
+                                                <td>1</td>
+                                                <td class="center">1.8</td>
+                                                <td class="center">A</td>
+                                            </tr>
+                                            <tr class="gradeA">
+                                                <td>139</td>
+                                                <td> Mint </td>
+                                                <td>2</td>
+                                                <td class="center">1.7</td>
+                                                <td class="center">A</td>
+                                            </tr>
+                                            <tr class="gradeA">
+                                                <td>140</td>
+                                                <td>Mint</td>
+                                                <td>1</td>
+                                                <td class="center">1.7</td>
+                                                <td class="center">A</td>
+                                            </tr>
+                                            <tr class="gradeA">
+                                                <td>141</td>
+                                                <td>Honeycomb</td>
+                                                <td>1</td>
+                                                <td class="center">1.8</td>
+                                                <td class="center">A</td>
+                                            </tr>
+                                            <tr class="gradeA">
+                                                <td>142</td>
+                                                <td>Rum and Raisin</td>
+                                                <td>2</td>
+                                                <td class="center">1</td>
+                                                <td class="center">A</td>
+                                            </tr>
+                                            <tr class="gradeA">
+                                                <td>143</td>
+                                                <td>Honeycomb</td>
+                                                <td>2</td>
+                                                <td class="center">1.1</td>
+                                                <td class="center">A</td>
+                                            </tr>
+                                            <tr class="gradeA">
+                                                <td>144</td>
+                                                <td> Cherry</td>
+                                                <td>2</td>
+                                                <td class="center">1.2</td>
+                                                <td class="center">A</td>
+                                            </tr>
+                                            <tr class="gradeA">
+                                                <td>145</td>
+                                                <td>Chocolate</td>
+                                                <td>2</td>
+                                                <td class="center">1.3</td>
+                                                <td class="center">A</td>
+                                            </tr>
+                                            <tr class="gradeA">
+                                                <td>146</td>
+                                                <td> Salted Caramel</td>
+                                                <td>2</td>
+                                                <td class="center">1.4</td>
+                                                <td class="center">A</td>
+                                            </tr>
+                                            <tr class="gradeA">
+                                                <td>147</td>
+                                                <td>Strawberry </td>
+                                                <td>2</td>
+                                                <td class="center">1.5</td>
+                                                <td class="center">A</td>
+                                            </tr>
+                                            <tr class="gradeA">
+                                                <td>148</td>
+                                                <td>Strawberry </td>
+                                                <td>2</td>
+                                                <td class="center">1.6</td>
+                                                <td class="center">A</td>
+                                            </tr>
+                                            <tr class="gradeA">
+                                                <td>150</td>
+                                                <td>Strawberry </td>
+                                                <td>1</td>
+                                                <td class="center">1.7</td>
+                                                <td class="center">A</td>
+                                            </tr>
+                                            <tr class="gradeA">
+                                                <td>151</td>
+                                                <td>Cherry</td>
+                                                <td>1</td>
+                                                <td class="center">1.8</td>
+                                                <td class="center">A</td>
+                                            </tr>
+                                            <tr class="gradeA">
+                                                <td>152</td>
+                                                <td>Salted Caramel</td>
+                                                <td>1</td>
+                                                <td class="center">1.8</td>
+                                                <td class="center">A</td>
+                                            </tr>
+                                            <tr class="gradeA">
+                                                <td>153</td>
+                                                <td>Salted Caramel</td>
+                                                <td>2</td>
+                                                <td class="center">1.8</td>
+                                                <td class="center">A</td>
+                                            </tr>
+                                            <tr class="gradeA">
+                                                <td>194</td>
+                                                <td>Cherry</td>
+                                                <td>3</td>
+                                                <td class="center">125.5</td>
+                                                <td class="center">A</td>
+                                            </tr>
+                                            <tr class="gradeA">
+                                                <td>197</td>
+                                                <td> Honeycomb</td>
+                                                <td>3</td>
+                                                <td class="center">312.8</td>
+                                                <td class="center">A</td>
+                                            </tr>
+                                            <tr class="gradeA">
+                                                <td>192</td>
+                                                <td>Cherry</td>
+                                                <td>3</td>
+                                                <td class="center">419.3</td>
+                                                <td class="center">A</td>
+                                            </tr>
+                                            <tr class="gradeA">
+                                                <td>199</td>
+                                                <td>Cherry</td>
+                                                <td>3</td>
+                                                <td class="center">522.1</td>
+                                                <td class="center">A</td>
+                                            </tr>t
+                                            <tr class="gradeA">
+                                                <td>190</td>
+                                                <td>Cherry</td>
+                                                <td>3</td>
+                                                <td class="center">420</td>
+                                                <td class="center">A</td>
+                                            </tr>
+                                            <tr class="gradeA">
+                                                <td>195</td>
+                                                <td> Honeycomb</td>
+                                                <td>4</td>
+                                                <td class="center">420.1</td>
+                                                <td class="center">A</td>
+                                            </tr>
+                                            <tr class="gradeA">
+                                                <td>188</td>
+                                                <td>Cherry</td>
+                                                <td>2</td>
+                                                <td class="center">413</td>
+                                                <td class="center">A</td>
+                                            </tr>
+                                            <tr class="gradeA">
+                                                <td>166</td>
+                                                <td>Mint</td>
+                                                <td>2</td>
+                                                <td class="center">2</td>
+                                                <td class="center">A</td>
+                                            </tr>
+                                            <tr class="gradeA">
+                                                <td>167</td>
+                                                <td>Honeycomb</td>
+                                                <td>2</td>
+                                                <td class="center">2</td>
+                                                <td class="center">A</td>
+                                            </tr>
+                                            <tr class="gradeA">
+                                                <td>168</td>
+                                                <td>Mint</td>
+                                                <td>2</td>
+                                                <td class="center">2</td>
+                                                <td class="center">A</td>
+                                            </tr>
+                                            <tr class="gradeA">
+                                                <td>169</td>
+                                                <td>Mint</td>
+                                                <td>2</td>
+                                                <td class="center">2</td>
+                                                <td class="center">A</td>
+                                            </tr>
+                                            <tr class="gradeA">
+                                                <td>160</td>
+                                                <td>Cherry</td>
+                                                <td>5</td>
+                                                <td class="center">2</td>
+                                                <td class="center">A</td>
+                                            </tr>
+                                            <tr class="gradeA">
+                                                <td>171</td>
+                                                <td>Honeycomb</td>
+                                                <td>3</td>
+                                                <td class="center">2</td>
+                                                <td class="center">A</td>
+                                            </tr>
+                                            <tr class="gradeA">
+                                                <td>172</td>
+                                                <td>Honeycomb</td>
+                                                <td>3</td>
+                                                <td class="center">2</td>
+                                                <td class="center">A</td>
+                                            </tr>
+                                            <tr class="gradeA">
+                                                <td>173</td>
+                                                <td> Honeycomb</td>
+                                                <td>3</td>
+                                                <td class="center">2</td>
+                                                <td class="center">A</td>
+                                            </tr>
+                                            <tr class="gradeA">
+                                                <td>174</td>
+                                                <td>Cherry</td>
+                                                <td>4</td>
+                                                <td class="center">2</td>
+                                                <td class="center">A</td>
+                                            </tr>
+                                            <tr class="gradeA">
+                                                <td>175</td>
+                                                <td>Honeycomb</td>
+                                                <td>2</td>
+                                                <td class="center">8.5</td>
+                                                <td class="center">C/A<sup>1</sup>
+                                                </td>
+                                            </tr>
+                                            <tr class="gradeC">
+                                                <td>123</td>
+                                                <td>Honeycomb</td>
+                                                <td>2</td>
+                                                <td class="center">3.1</td>
+                                                <td class="center">C</td>
+                                            </tr>
+                                            <tr class="gradeA">
+                                                <td>112</td>
+                                                <td> Chocolate</td>
+                                                <td>2</td>
+                                                <td class="center">3.3</td>
+                                                <td class="center">A</td>
+                                            </tr>
+                                            <tr class="gradeA">
+                                                <td>114</td>
+                                                <td>Honeycomb</td>
+                                                <td>2</td>
+                                                <td class="center">3.5</td>
+                                                <td class="center">A</td>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>305</td>
+                                                <td>Mint</td>
+                                                <td>5</td>
+                                                <td class="center">2</td>
+                                                <td class="center">X</td>
+                                            </tr>
+                                            <tr class="gradeC">
+                                                <td>306</td>
+                                                <td>Mint</td>
+                                                <td>4</td>
+                                                <td class="center">1</td>
+                                                <td class="center">C</td>
+                                            </tr>
+                                            <tr class="gradeC">
+                                                <td>307</td>
+                                                <td>Cherry</td>
+                                                <td>4</td>
+                                                <td class="center">1</td>
+                                                <td class="center">C</td>
+                                            </tr>
+                                            <tr class="gradeA">
+                                                <td>203</td>
+                                                <td>Salted Caramel</td>
+                                                <td>2</td>
+                                                <td class="center">2</td>
+                                                <td class="center">C</td>
+                                            </tr>
+                                            <tr class="gradeA">
+                                                <td>204</td>
+                                                <td>Salted Caramel</td>
+                                                <td>2</td>
+                                                <td class="center">2</td>
+                                                <td class="center">A</td>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>205</td>
+                                                <td>Salted Caramel</td>
+                                                <td>2</td>
+                                                <td class="center">2</td>
+                                                <td class="center">B</td>
+                                            </tr>
+                                            <tr class="gradeX">t
+                                                <td>206</td>
+                                                <td> Chocolate</td>
+                                                <td>4</td>
+                                                <td class="center">2</td>
+                                                <td class="center">B</td>
+                                            </tr>
+                                            <tr class="gradeX">
+                                                <td>207</td>
+                                                <td> Chocolate</td>
+                                                <td>4</td>
+                                                <td class="center">2</td>
+                                                <td class="center">B</td>
+                                            </tr>
+                                            <tr class="gradeC">
+                                                <td>209</td>
+                                                <td> Chocolate</td>
+                                                <td>6</td>
+                                                <td class="center">2</td>
+                                                <td class="center">C</td>
+                                            </tr>
+                                            <tr class="gradeC">
+                                                <td>208</td>
+                                                <td> Chocolate</td>
+                                                <td>1</td>
+                                                <td class="center">2</td>
+                                                <td class="center">C</td>
+                                            </tr>
+                                            <tr class="gradeU">
+                                                <td>179</td>
+                                                <td>Cherry</td>
+                                                <td>2</td>
+                                                <td class="center">2</td>
+                                                <td class="center">B</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!--End Advanced Tables -->
+                    </div>
+                </div>
+                <!-- /. ROW  -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <!--   Deliverer -->
+                        <div class="card">
+                            <div class="card-action">
+                                Deliverer
+                            </div>
+                            <div class="card-content">
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-bordered table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>First Name</th>
+                                                <th>Last Name</th>
+                                                <th>Username</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Mark</td>
+                                                <td>Otto</td>
+                                                <td>@mdo</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Jacob</td>
+                                                <td>Thornton</td>
+                                                <td>@fat</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Larry</td>
+                                                <td>the Bird</td>
+                                                <td>@twitter</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End  Deliverer -->
+                    </div>
+                    <div class="col-md-6">
+                        <!--   Waiter  -->
+                        <div class="card">
+                            <div class="card-action">
+                                Waiter
+                            </div>
+                            <div class="card-content">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>First Name</th>
+                                                <th>Last Name</th>
+                                                <th>Username</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>John</td>
+                                                <td>Gardner</td>
+                                                <td>@mdo</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Anthony</td>
+                                                <td>Glover</td>
+                                                <td>@fat</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>David</td>
+                                                <td>Goodwin</td>
+                                                <td>@twitter</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End  Waiter  -->
+                    </div>
+                </div>
+                <!-- /. ROW  -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <!--    Other Staff  -->
+                        <div class="card">
+                            <div class="card-action">
+                                Other Staff
+                            </div>
+                            <div class="card-content">
+                                <div class="table-responsive">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>First Name</th>
+                                                <th>Last Name</th>
+                                                <th>Username</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Maisie</td>
+                                                <td>Graham</td>
+                                                <td>@mdo</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Brooke</td>
+                                                <td>Dodd</td>
+                                                <td>@fat</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Joel</td>
+                                                <td>Parkinson</td>
+                                                <td>@twitter</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!--  End  Other Staff  -->
+                    </div>
+                    <div class="col-md-6">
+                      
+                </div>
+                <div class="col-md-6">
+                    <!--    Outstanding Staff  -->
+                    <div class="card">
+
+                        <div class="card-action">
+                            Outstanding Staff
+                        </div>
+
+                        <div class="card-content">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>First Name</th>
+                                            <th>Last Name</th>
+                                            <th>Username</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="success">
+                                            <td>1</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                        </tr>
+                                        <tr class="info">
+                                            <td>2</td>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                        </tr>
+                                        <tr class="warning">
+                                            <td>3</td>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                        </tr>
+                                        <tr class="danger">
+                                            <td>4</td>
+                                            <td>John</td>
+                                            <td>Smith</td>
+                                            <td>@jsmith</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  end  Outstanding Staff  -->
+                </div>
+            </div>
+            <!-- /. ROW  -->
+
+
+        </div>
+        <!-- /. PAGE INNER  -->
+    </div>
+    <!-- /. PAGE WRAPPER  -->
+    <!-- /. WRAPPER  -->
+    <!-- JS Scripts-->
+
+
+    <!-- jQuery Js -->
+    <script src="assets/js/jquery-1.10.2.js"></script>
+
+    <!-- Bootstrap Js -->
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <script src="assets/materialize/js/materialize.min.js"></script>
+
+    <!-- Metis Menu Js -->
+    <script src="assets/js/jquery.metisMenu.js"></script>
+    <!-- Morris Chart Js -->
+    <script src="assets/js/morris/raphael-2.1.0.min.js"></script>
+    <script src="assets/js/morris/morris.js"></script>
+
+
+    <script src="assets/js/easypiechart.js"></script>
+    <script src="assets/js/easypiechart-data.js"></script>
+
+    <script src="assets/js/Lightweight-Chart/jquery.chart.js"></script>
+    <!-- DATA TABLE SCRIPTS -->
+    <script src="assets/js/dataTables/jquery.dataTables.js"></script>
+    <script src="assets/js/dataTables/dataTables.bootstrap.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#dataTables-example').dataTable();
+        });
+    </script>
+    <!-- Custom Js -->
+    <script src="assets/js/custom-scripts.js"></script>
+
+
+</body>
+
+</html>
